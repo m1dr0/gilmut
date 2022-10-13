@@ -65,10 +65,6 @@ namespace лаба3
             {
                 s1 += x[i];
                 s3 += Math.Pow(x[i], 2);
-                s5 += Math.Pow(x[i], 3);
-                s6 += Math.Pow(x[i], 4);
-                s7 = s7 + (x[i] * x[i] * y[i]);
-
             }
             for (int i = 0; i < y.Length; i++)
             {
@@ -76,9 +72,16 @@ namespace лаба3
                 s4 += x[i] * y[i];
             }
 
-            double a0 = delta1(s1, s2, s3, s4, s5, s6, s7) / delta(s1, s2, s4, s6);
-            double a1 = delta2(s1, s2, s3, s4, s5, s6, s7) / delta(s1, s2, s4, s6);
-            double a2 = delta3(s1, s2, s3, s4, s5, s6, s7) / delta(s1, s2, s4, s6);
+            for (int i = 0; i < x.Length; i++)
+            {
+                s5 += Math.Pow(x[i], 3);
+                s6 += Math.Pow(x[i], 4);
+                s7 = s7 + (x[i] * x[i] * y[i]);
+            }
+
+            double a0 = (s2 * s3 * s6 - s2 * s5 * s5 - s1 * s4 * s6 + s1 * s5 * s7 + s3 * s4 * s5 - s3 * s3 * s7) / (n * s3 * s6 - n * s5 * s5 - s1 * s1 * s6 + s1 * s5 * s3 + s3 * s1 * s5 - s3 * s3 * s3);
+            double a1 = (n * s4 * s6 - n * s5 * s7 - s2 * s1 * s6 + s2 * s5 * s3 + s3 * s1 * s7 - s3 * s4 * s3) / (n * s3 * s6 - n * s5 * s5 - s1 * s1 * s6 + s1 * s5 * s3 + s3 * s1 * s5 - s3 * s3 * s3);
+            double a2 = (n * s3 * s7 - n * s4 * s5 - s1 * s1 * s7 + s1 * s4 * s3 + s2 * s1 * s5 - s2 * s3 * s3) / (n * s3 * s6 - n * s5 * s5 - s1 * s1 * s6 + s1 * s5 * s3 + s3 * s1 * s5 - s3 * s3 * s3);
             Console.WriteLine("Квадратичная аппроксимация: \n");
             Console.WriteLine("s1= {0}, s2= {1}, s3= {2}, s4= {3}, s5= {4}, s6= {5}, s7= {6}", s1, s2, s3, s4, s5, s6, s7);
             Console.WriteLine("a0= {0}, a1= {1} a2= {2}", a0, a1, a2);
