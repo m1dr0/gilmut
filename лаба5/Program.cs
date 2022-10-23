@@ -6,15 +6,15 @@ namespace лаба5
     {
         static double func(double x)
         {
-            return (Math.Sqrt(1.5 * x + 0.6)) / (1.6 + Math.Sqrt(0.8 * Math.Pow(x, 2) + 2));
+            return (Math.Sqrt(0.8 * Math.Pow(x, 2) + 1) / (x + Math.Sqrt(1.5 * Math.Pow(x , 2) + 0.5)));
         }
 
 
         static void Rect()
         {
             double a, b, result1 = 0, result2 = 0, result3 = 0, result4 = 0;
-            a = 1;
-            b = 2.2;
+            a = 0.8;
+            b = 1.8;
             int n = 50;
             double H = (b - a) / n;
             for (double x = a; x < b; x += H)
@@ -30,10 +30,10 @@ namespace лаба5
             }
             Console.WriteLine("a = " + a);
             Console.WriteLine("b = " + b);
-            Console.WriteLine("result1 = " + result1);
-            Console.WriteLine("result2 = " + result2);
-            Console.WriteLine("result3 = " + result3);
-            Console.WriteLine("result4 = " + result4);
+            Console.WriteLine("метод левых прямоугольников = " + result1);
+            Console.WriteLine("метод правых прямоугольников = " + result2);
+            Console.WriteLine("метод трапеций = " + result3);
+            Console.WriteLine("метод средних прямоугольников = " + result4);
 
         }
         static void Simpson(double a, double b, int n)
