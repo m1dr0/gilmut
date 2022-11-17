@@ -39,8 +39,8 @@ namespace лаба6
 
         static void TestEulerCoupledODE()
         {
-            double x = 0, y = 5.0, z = 10.0;  //initial conditions
-            double h = 0.11;                  //step size
+            double x = 0, y = 5.0, z = 10.0;  //нач условия
+            double h = 0.1;                  //шаг
             double k0, k1, k2, k3;
             double l0, l1, l2, l3;
 
@@ -63,8 +63,8 @@ namespace лаба6
 
         static void run()
         {
-            double x = 0, y = 5.0, z = 10.0;  //initial conditions
-            double h = 0.1;                  //step size
+            double x = 0, y = 5.0, z = 10.0;  //нач условия
+            double h = 0.1;                  //шаг
             double k0, k1, k2, k3;
             double l0, l1, l2, l3;
 
