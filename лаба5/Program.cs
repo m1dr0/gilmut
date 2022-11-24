@@ -12,9 +12,7 @@ namespace лаба5
 
         static void Rect()
         {
-            double a, b, result1 = 0, result2 = 0, result3 = 0, result4 = 0;
-            a = 0.8;
-            b = 1.8;
+            double a = 0.8, b = 1.8, result1 = 0, result2 = 0, result3 = 0, result4 = 0;
             int n = 50;
             double H = (b - a) / n;
             for (double x = a; x < b; x += H)
@@ -39,7 +37,7 @@ namespace лаба5
         static void Simpson(double a, double b, int n)
         {
             int i;
-            double S = 0;
+            double S;
             double[] x = new double[n + 1];
             double h = (b - a) / n;
             //значение функции для равноотстоящих точек

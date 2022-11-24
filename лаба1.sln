@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "лаба5", "лаба5\ла
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "лаба6", "лаба6\лаба6.csproj", "{92E07696-5545-4B01-9EA7-B93DC951365A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "курсач", "курсач\курсач.csproj", "{66EFD646-1B5F-4F77-8CF7-2C5696548879}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "курсач", "курсач\курсач.csproj", "{66EFD646-1B5F-4F77-8CF7-2C5696548879}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
